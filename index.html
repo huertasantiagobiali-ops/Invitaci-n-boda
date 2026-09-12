@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda — Ximena & Gael</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory; /* ✅ Esto hace el efecto de librito */
+        }
+        body {
+            background: #2c0a0a;
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        /* 📖 Cada sección es una PÁGINA que ocupa toda la pantalla */
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            scroll-snap-align: start; /* ✅ Se "fija" al deslizar, como libro */
+            background: linear-gradient(180deg, #2c0a0a 0%, #4a1515 50%, #2c0a0a 100%);
+        }
+        h1.titulo {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 10vw, 5rem);
+            margin-bottom: 3rem;
+        }
+        h2.nombres {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            line-height: 1.4;
+            margin: 2rem 0;
+        }
+        .frase {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            opacity: 0.9;
+            max-width: 350px;
+        }
+        .frase-autor {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            opacity: 0.75;
+        }
+        .intro {
+            font-size: 1.1rem;
+            margin: 2rem auto;
+            line-height: 2;
+            max-width: 360px;
+        }
+        h3.seccion {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .destacado {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .dato {
+            font-size: 1.15rem;
+            margin: 0.8rem 0;
+            line-height: 1.7;
+        }
+        a {
+            color: #f0c987;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .flecha {
+            margin-top: 3rem;
+            font-size: 2rem;
+            opacity: 0.5;
+            animation: parpadeo 2s infinite;
+        }
+        @keyframes parpadeo {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+        .cierre {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 📖 PÁGINA 1 — Portada -->
+    <section class="page" id="portada">
+        <h1 class="titulo">Nuestra Boda</h1>
+        <h2 class="nombres">Ximena Arleth<br>&<br>Gael Huerta</h2>
+        <p class="flecha">↓</p>
+    </section>
+
+    <!-- 📖 PÁGINA 2 — Frase e invitación -->
+    <section class="page" id="frase">
+        <p class="frase">
+            "Yo soy la rima de tus labios, tú el final de los agravios…<br>
+            Te quiero ver."
+        </p>
+        <p class="frase-autor">— Alex Ferreira</p>
+
+        <p class="intro">
+            En este instante eterno donde dos almas deciden caminar juntas,
+            te invitamos a ser parte de nuestra historia, a acompañarnos en este capítulo lleno de amor, magia y promesas cumplidas.
+        </p>
+
+        <h2 class="destacado">XIMENA & GAEL</h2>
+        <p class="flecha">↓</p>
+    </section>
+
+    <!-- 📖 PÁGINA 3 — Ceremonia -->
+    <section class="page" id="ceremonia">
+        <h3 class="seccion">Ceremonia Religiosa</h3>
+        <p class="intro" style="margin: 0.5rem 0;">Nos daremos el "sí" frente al altar en una ceremonia llena de fe, amor y significado.</p>
+        <p class="dato"><strong>Lugar:</strong><br>
+            <a href="https://www.google.com/maps/search/?api=1&query=Parroquia+San+Juan+Bautista+Plaza+Centenario+8+Coyoacan+CDMX" target="_blank">
+                Parroquia San Juan Bautista<br>
+                Plaza Centenario 8, Coyoacán, CDMX
+            </a>
+        </p>
+        <p class="dato"><strong>Fecha y Hora:</strong><br>
+            Sábado 23 de octubre de 2027<br>
+            6:00 PM
+        </p>
+        <p class="flecha">↓</p>
+    </section>
+
+    <!-- 📖 PÁGINA 4 — Recepción -->
+    <section class="page" id="recepcion">
+        <h3 class="seccion">Recepción</h3>
+        <p class="intro" style="margin: 0.5rem 0;">Después de sellar nuestro compromiso, los esperamos con los brazos abiertos para festejar juntos.</p>
+        <p class="dato"><strong>Lugar:</strong><br>
+            <a href="https://www.google.com/maps/search/?api=1&query=Casa+Xipe+Av+Pacífico+151+El+Rosedal+Coyoacan+CDMX" target="_blank">
+                Casa Xipe<br>
+                Av. Pacífico 151, El Rosedal, Coyoacán, CDMX
+            </a>
+        </p>
+        <p class="dato"><strong>Fecha y Hora:</strong><br>
+            Sábado 23 de octubre de 2027<br>
+            7:30 PM
+        </p>
+        <p class="cierre">✨ Los esperamos con todo nuestro amor ✨</p>
+    </section>
+
+</body>
+</html>
